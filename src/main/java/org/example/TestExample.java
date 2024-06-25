@@ -9,6 +9,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TestExample {
+
+
     // Shared between all tests in this class.
     static Playwright playwright;
     static Browser browser;
@@ -19,6 +21,7 @@ public class TestExample {
 
     @BeforeAll
     static void launchBrowser() {
+        System.out.println("Execution started: launchBrowser: ");
         playwright = Playwright.create();
         browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
     }

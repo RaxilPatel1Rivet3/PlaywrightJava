@@ -10,6 +10,8 @@ import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertTha
 public class App {
 
     public static void main(String[] args) {
+
+        System.out.println("Execution started");
         try (Playwright playwright = Playwright.create()) {
             Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
             Page page = browser.newPage();
